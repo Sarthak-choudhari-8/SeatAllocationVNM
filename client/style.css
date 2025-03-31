@@ -35,9 +35,9 @@ h2 {
 
     background-image: url(logo2.jpeg);
     height: 200px;
-    width: 200px;
+    width: 220px;
     position: relative;
-    left: 20px;
+    left: 0px;
     top: 20px;
     background-size: cover
 }
