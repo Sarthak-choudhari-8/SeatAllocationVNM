@@ -1,0 +1,231 @@
+*{
+    scroll-behavior: smooth;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+ 
+    display: flex;
+   
+}
+
+h2 {
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    /* background-color: #007bff; */
+    background-color: whitesmoke;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  
+}
+
+.sidebar-logo{
+
+    background-image: url(logo2.jpeg);
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    background-size: cover
+}
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background-color: #004494;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Admin Info Box */
+.admin-info {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Form */
+.container {
+    text-align: center;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.green-btn {
+    background-color: #28a745;
+}
+
+.green-btn:hover {
+    background-color: #218838;
+}
+
+/* Logout Button */
+.logout {
+    background-color: red;
+    display: block;
+    margin: 20px auto;
+}
+
+.logout:hover {
+    background-color: darkred;
+}
+
+/* Card Styling */
+.card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Status Indicator */
+.status-indicator {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.online {
+    background-color: #28a745;
+    color: white;
+}
+
+.offline {
+    background-color: red;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+  /* padding: px; */
+    background-color: #007bff;
+    color: white;
+    margin-top: 30px;
+    height: 30px ;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#hallContainer,
+#csvContainer {
+    width: 500px;  /* Increased by 100px */
+    height: auto;   /* Auto height to adjust content */
+    min-height: 300px; /* Increased by 100px */
+    padding: 30px; /* Increased padding for more space */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Make elements inside more free & spaced */
+#hallContainer input,
+#csvContainer input,
+#hallContainer button,
+#csvContainer button {
+    width: 80%;  /* Wider input fields */
+    padding: 12px;
+    margin: 15px 37.5px;  /* Increased space between elements */
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#hallContainer button,
+#csvContainer button {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px; /* More space from input fields */
+    padding: 12px;
+}

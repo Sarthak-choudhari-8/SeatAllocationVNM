@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Student Allocation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>[ Admin Panel Features ]</h2>
+        <ul ">
+            <li style="background-color: orange;"><a href="#hallContainer"  style="color: black;">Manage Halls</a></li>
+            <li style="background-color: orange;"><a href="#hallContainer" style="color: black;">Manage Halls Capacity</a></li>
+            <li style="background-color: orange;"><a href="#csvContainer"  style="color: black;">Upload / Download CSV </a></li> 
+            <li style="background-color: orange;"><a href="#csvContainer"  style="color: black;">Send Emails </a></li>
+              
+            <li ><a href="#admin-info-box"  style="color: black;">Login / Logout </a></li>
+
+        </ul>
+
+        <div class="sidebar-logo"></div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            Smart Exam Hall & Seat Allocation System
+        </header>
+
+        <!-- Admin Info Box -->
+        <div class="admin-info" id="admin-info-box">
+            <p>Welcome, <strong>Admin ( Deogiri College )</strong></p>
+            <p>Status : <span class="status"> Logged In successfully </span></p>
+        </div>
+
+        <!-- Admin Login Container -->
+        <div class="container" id="adminContainer" style="margin-bottom: 100px;">
+            <h2>Admin Login</h2>
+            <input type="text" id="adminUser" placeholder="Enter Admin ID">
+            <input type="password" id="adminPass" placeholder="Enter Password">
+            <button id="loginBtn">Login</button>
+            <p id="loginMessage"></p>
+        </div>
+
+        <!-- Dashboard (Hidden Initially) -->
+        <div id="dashboard" style="display: none;">
+            <button id="logoutBtn" class="logout">Logout</button>
+
+            <!-- Hall & Capacity Input -->
+            <div class="container card" id="hallContainer">
+                <h2>Enter Hall & Capacity</h2>
+                <input type="number" id="hallNumber" placeholder="Number of Halls" min="1">
+                <input type="number" id="hallCapacity" placeholder="Seats per Hall" min="1">
+                <button id="submitHallBtn">Set Hall & Capacity</button>
+            </div>
+
+            <!-- CSV Upload -->
+            <div class="container card" id="csvContainer">
+                <h2>Upload Student CSV File</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" id="csvFile" accept=".csv" required>
+                    <button type="submit">Upload</button>
+                </form>
+                <p id="message"></p>
+
+                <button id="downloadBtn" class="green-btn">Download Allocated CSV</button>
+                <button id="sendEmailsBtn" class="green-btn">Send Email Notifications</button>
+            </div>
+
+            <!-- Status Indicator -->
+            <div class="status-indicator">
+                <p>Server Status: <span class="status online">Online</span></p>
+                <p>Email Service: <span class="status online">Online</span></p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Smart Exam Seat Allocation (Deogiri College ) </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
